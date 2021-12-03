@@ -1,7 +1,20 @@
 #!/bin/bash
 
-x.validate() {
-  echo would validate
+# To activate tab completion: complete -C k8sapp k8sapp
+# Don't forget to check with shellcheck
+
+set -e
+
+x.fetch() {
+  echo would fetch
+}
+
+x.review() {
+  echo review the code before configuring and installing
+}
+
+x.config() {
+  echo would config
 }
 
 x.install() {
@@ -9,11 +22,15 @@ x.install() {
 }
 
 x.update() {
-  echo would update
+  echo would update to the latest version
 }
 
 x.uninstall() {
   echo would uninstall
+}
+
+x.check() {
+  echo would check for updated version
 }
 
 # add functions beginning with x. to COMMANDS

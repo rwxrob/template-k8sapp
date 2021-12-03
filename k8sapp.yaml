@@ -1,0 +1,46 @@
+# This file contains metadata about this Kubernetes namespaced
+# application which is used in conjuction with the master k8sapps
+# manifest repo which contains a list of all applications repo.
+
+# unique long name within the scope of a given Git repo collection or
+# service that may contain qualifiers similar to container image
+# references (ex: `hpc/nfd`)
+longname: 
+
+# short name for referencing easily within local contexts and
+# corresponding to the git repo name after the prefix (`k8sapp-jhub` ->
+# `jhub`)
+shortname:
+
+# descriptive title of 70 Unicode characters or less for creating lists of K8SAPPs 
+title:
+
+# semver of this K8SAPP, *not* it's origin, `git tag` also must be synced
+version: 
+
+# Git-friendly reference to the required source Git repo (usually HTTP)
+repo:
+
+# list of primary contacts with `name`, `email`, `url`, `slack`
+maintainers:
+
+# list of sources composed into K8SAPP (Helm charts, other repos, etc.)
+includes:
+
+    # unique name within this K8SAPP repo
+  - name:
+
+    # descriptive title, 70 Unicode characters or less
+    title:
+
+    # one of helm, git, etc.
+    type:
+
+    # primary source of information about
+    url:
+
+    # semantic version as indicated by source
+    version: 
+
+    # one or more sources that contain the composed include
+    sources:
