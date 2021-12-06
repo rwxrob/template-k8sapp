@@ -1,10 +1,19 @@
 # Kubernetes Application Template (K8SAPP)
 
-*Replace this description with your own.*  
-[*Jump to quick start checklist.*](#checklist)
+[*Jump to quick start checklist, or ...*](#checklist)
+
+*Replace the above title with your own.*
+
+*Replace the description below with your own.*  
 
 This GitHub template is meant to help encapsulate a Kubernetes
 application consistent with the [K8SAPP Conventions][].
+
+[K8SAPP Conventions]: https://github.com/rwxrob/k8sapp
+
+## Application Repo Organization
+
+*Remove the following paragraph after reading.*
 
 > ⚠️  The term "application" here refers to everything within a specific
 > Kubernetes namespace even though that namespace may contain several
@@ -14,20 +23,76 @@ application consistent with the [K8SAPP Conventions][].
 > exists as a dependent part of the whole) or aggregation (app lives on
 > independently of the whole) relationship.
 
-[K8SAPP Conventions]: https://github.com/rwxrob/k8sapp
+This repo follows the K8SAPP conventions:
 
-## Use the `k8sapp` Shell Script
+* `README.md` - description, notes, and references
+* `k8sapp.yaml` - metadata about this application
 
-*Delete this section if creating a `k8sapp` or update to match your own
-description.*
+## Application Management Procedures
 
-Although the K8SAPP conventions don't specify needing any additional
-coding (only documented procedures) it is usually helpful to capture
-these procedures as simple, well-documented, shell code. The
-[`k8sapp`](k8sapp) script provides a simple starting shell script
-template that includes minimal tab completion support.
+*Remove this comment after documenting how to fetch, review, config,
+install, update, uninstall, and check your namespaced application.*
+
+Avoid putting any of this into a separate script (except `check`) since
+things might change upon update and every change needs to be reviewed
+again and *all* the management procedures could potentially need to be
+updated.
+
+### Fetching the Code
+
+*Add explanation describing how to get the code safely in an
+air-gapped environment.*
+
+### Reviewing Code and Container Images
+
+*Add explanation describing how the code was reviewed "by hand" and
+should be in the future. Describe how the images should be retrieved in
+an air-gapped environment and then scanned for vulnerabilities before
+explaining how to push them to the internal container image registry.*
+
+### Customizing and Configuring
+
+*Add full description and instructions about how to customize the
+default source code and configuration "by hand" to be compatible with
+your internal cluster configuration and policies. Include code examples.
+Consider flattening Helm charts and Kustomize overlays resulting in a
+single resource YAML file.*
+
+### Installing
+
+*Add instructions for installing preferably using nothing but `kubectl`
+commands and a single YAML resource file.*
+
+### Updating
+
+*Add instructions to update between each version of your configuration
+(whether custom configuration or updates to the source itself).*
+
+### Uninstalling
+
+*Add instructions for how to cleanly uninstall everything related to
+this namespaced application including any cluster-scoped resources
+(RBAC, ClusterRole, etc.)*
+
+### Check for Updates
+
+*Add precise instructions for how to check for original source updates.
+Strongly consider creating a `check` script that returns 1 if something
+has changed and 0 if not. This allows update availability audits to be
+automated.*
+
+## Caveats
+
+*Add warning, gotchas, and other special considerations to be aware of
+for this specific namespaced Kubernetes application.*
+
+## Relate References
+
+*Add links to relevant sources and information.*
 
 ## Checklist
+
+*Delete this section after using it to get started.*
 
 - [ ] Change the title heading
 - [ ] Update the description at the top of the README.md
@@ -35,9 +100,10 @@ template that includes minimal tab completion support.
 - [ ] Fetch the code securely
 - [ ] Document and/or automate the fetch process
 - [ ] Review and understand the code, document caveats
-- [ ] Configure the code
-- [ ] Document and/or automate configuration procedure
 - [ ] Add a namespace if needed 
+- [ ] Make custom configurations as needed
+- [ ] Document and/or automate configuration procedure
+- [ ] Download, review, scan, and mirror container images
 - [ ] Install the code locally and into dev and document installation
 - [ ] Document and/or automate an upgrade procedure
 - [ ] Document and/or automate an uninstall procedure
@@ -45,3 +111,4 @@ template that includes minimal tab completion support.
 - [ ] Document any additional references and URLs
 - [ ] Add metadata to `k8sapp.yaml`
 - [ ] Add an entry to the main `k8sapps` manifest meta repo 
+
