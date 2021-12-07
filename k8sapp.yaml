@@ -15,7 +15,8 @@ shortname:
 # descriptive title of 70 Unicode characters or less for creating lists of K8SAPPs 
 title:
 
-# semver of this K8SAPP, *not* it's origin, `git tag` also must be synced
+# semver of this K8SAPP beginning with `v`, *not* it's origin, `git tag`
+# also must be synced
 version: 
 
 # Git-friendly reference to the required source Git repo (usually HTTP)
