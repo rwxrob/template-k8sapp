@@ -61,7 +61,8 @@ single resource YAML file.*
 ### Installing
 
 *Add instructions for installing preferably using nothing but `kubectl`
-commands and a single YAML resource file.*
+commands and a single YAML resource file. Be sure to include references
+to dependencies and prerequisites.*
 
 ### Updating
 

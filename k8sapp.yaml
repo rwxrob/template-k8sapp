@@ -21,27 +21,3 @@ version:
 
 # Git-friendly reference to the required source Git repo (usually HTTP)
 repo:
-
-# list of primary contacts with `name`, `email`, `url`, `slack`
-maintainers:
-
-# list of sources composed into K8SAPP (Helm charts, other repos, etc.)
-includes:
-
-    # unique name within this K8SAPP repo
-  - name:
-
-    # descriptive title, 70 Unicode characters or less
-    title:
-
-    # one of helm, git, etc.
-    type:
-
-    # primary source of information about
-    url:
-
-    # semantic version as indicated by source
-    version: 
-
-    # one or more sources that contain the composed include
-    sources:
