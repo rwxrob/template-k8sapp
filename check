@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "Replace me with code that returns 1 if an update is needed, otherwise 0."

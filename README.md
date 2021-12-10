@@ -1,4 +1,4 @@
-# Kubernetes Application Template (K8SAPP)
+# K8SAPP: Kubernetes Application Template
 
 [*Jump to quick start checklist, or ...*](#checklist)
 
@@ -27,6 +27,7 @@ This repo follows the K8SAPP conventions:
 
 * `README.md` - description, notes, and references
 * `k8sapp.yaml` - metadata about this application
+* `check` - simple script to return 1 if update needed
 
 ## Application Management Procedures
 
